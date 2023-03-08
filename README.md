@@ -38,3 +38,29 @@ cd nginx-quic/
 make 
 make install
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
+server {
+    listen 443 ssl http2;              # TCP listener for HTTP/2
+    listen 443 http3 reuseport;  # UDP listener for QUIC+HTTP/3
+
+    ssl_protocols       TLSv1.3; # QUIC requires TLS 1.3
+    ssl_certificate     ssl/www.example.com.crt;
+    ssl_certificate_key ssl/www.example.com.key;
+
+    add_header Alt-Svc 'quic=":443"; h3-27=":443";h3-25=":443"; h3-T050=":443"; h3-Q050=":443";h3-Q049=":443";h3-Q048=":443"; h3-Q046=":443"; h3-Q043=":443"'; # Advertise that QUIC is available
+}
+```
