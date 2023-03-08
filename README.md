@@ -23,3 +23,18 @@ cd build
 cmake ../
 make
 ```
+
+
+
+
+
+
+
+
+
+```
+cd nginx-quic/
+./auto/configure --prefix=/root/nginx --with-http_ssl_module --with-http_v2_module --with-http_v3_module --with-cc-opt="-I../boringssl-master/include" --with-ld-opt="-L../boringssl-master/build/ssl -L../boringssl-master/build/crypto"
+make 
+make install
+```
