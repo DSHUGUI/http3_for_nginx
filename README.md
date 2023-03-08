@@ -74,3 +74,9 @@ server {
 ```
 server_tokens off;
 ```
+
+
+
+```
+user root;
+```
