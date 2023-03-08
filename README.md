@@ -68,3 +68,9 @@ server {
 
 
 #### https://hg.nginx.org/nginx-quic/archive/quic.zip
+
+
+
+```
+server_tokens off;
+```
