@@ -12,3 +12,14 @@ chrome.exe --ignore-certificate-errors-spki-list=BSQJ0jkQ7wwhR7KvPZ+DSNk2XTZ/MS6
 
 
 ```
+
+
+
+```
+git clone --depth=1 https://github.com/google/boringssl.git boringssl-master
+cd boringssl-master/
+mkdir build
+cd build
+cmake ../
+make
+```
