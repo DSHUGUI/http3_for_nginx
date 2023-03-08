@@ -64,3 +64,7 @@ server {
     add_header Alt-Svc 'quic=":443"; h3-27=":443";h3-25=":443"; h3-T050=":443"; h3-Q050=":443";h3-Q049=":443";h3-Q048=":443"; h3-Q046=":443"; h3-Q043=":443"'; # Advertise that QUIC is available
 }
 ```
+
+
+
+#### https://hg.nginx.org/nginx-quic/archive/quic.zip
